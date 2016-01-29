@@ -1,1 +1,1 @@
-http://10.3.2.200/fastdl/MOTD/motd.html
+http://content.lan/fastdl/MOTD/motd.html
