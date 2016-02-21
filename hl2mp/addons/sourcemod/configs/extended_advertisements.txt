@@ -16,7 +16,7 @@
 	{
 		"type"		"S"
 		"text"		"Next map is {NEXTMAP} in {TIMELEFT} minutes."
-		"flags"		"cft"
+		"flags"		""
 	}
 	"4"
 	{
