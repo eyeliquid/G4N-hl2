@@ -9,7 +9,7 @@
 	"2"
 	{
 		"type"		"S"
-		"text"		"{GREEN}We are on Twitter. {LIGHTBLUE}@LacledesLAN"
+		"text"		"{GREEN}We are on Twitter. {lightblue}@LacledesLAN"
 		"flags"		""
 	}
 	"3"
