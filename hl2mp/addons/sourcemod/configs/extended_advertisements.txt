@@ -9,7 +9,7 @@
 	"2"
 	{
 		"type"		"S"
-		"text"		"We are on Twitter. @LacledesLAN"
+		"text"		"We are on Twitter! Tweet us at @LacledesLAN."
 		"flags"		""
 	}
 	"3"
@@ -26,7 +26,7 @@
 	"5"
 	{
 		"type"		"S"
-		"text"		"If there is any problems let us know at the admin table."
+		"text"		"If there are any problems feel free to talk to the staff at the admin table."
 		"flags"		""
 	}
 
