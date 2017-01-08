@@ -8,6 +8,8 @@ ENV IMAGE_NAME="gamesvr-hl2dm-freeplay.linux"
 
 USER root
 
+COPY ./dist /app/bin/
+
 # METAMOD
 	#download
 	ADD ["https://github.com/LacledesLAN/gamesvr-srcds-metamod.linux/archive/master.tar.gz", "/tmp/metamod.tar.gz"]
