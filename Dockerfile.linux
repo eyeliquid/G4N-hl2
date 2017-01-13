@@ -4,7 +4,7 @@ FROM lacledeslan/gamesvr-srcds-hl2dm:linux
 
 MAINTAINER Laclede's LAN <contact@lacledeslan.com>
 
-ENV IMAGE_NAME="gamesvr-srcds-hl2dm-freeplay:linux"
+ENV IMAGE="gamesvr-srcds-hl2dm-freeplay:linux"
 
 USER root
 
