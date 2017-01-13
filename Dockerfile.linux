@@ -1,10 +1,10 @@
 # escape=`
 
-FROM lacledeslan/gamesvr-hl2dm:linux
+FROM lacledeslan/gamesvr-srcds-hl2dm:linux
 
 MAINTAINER Laclede's LAN <contact@lacledeslan.com>
 
-ENV IMAGE_NAME="gamesvr-hl2dm-freeplay.linux"
+ENV IMAGE_NAME="gamesvr-srcds-hl2dm-freeplay:linux"
 
 USER root
 
@@ -18,7 +18,6 @@ COPY ./dist /app/bin/
 	RUN chown HL2DM /tmp/metamod.tar.gz && `
 		tar -xf /tmp/metamod.tar.gz -C /tmp/ && `
 		cp -r /tmp/*metamod*-master/dist/* /app/bin/hl2mp/
-
 	
 # SOURCE MOD
 	#download
@@ -29,9 +28,10 @@ COPY ./dist /app/bin/
 		tar -xf /tmp/sourcemod.tar.gz -C /tmp/ && `
 		cp -r /tmp/*sourcemod*-master/dist/* /app/bin/hl2mp/
 
-
 # CLEAN UP
 RUN usermod -l HL2DM.Freeplay HL2DM && `
-	rm -rf /tmp/* 
+	rm -rf /tmp/*
+	
+WORKDIR /app/bin/
 
 USER HL2DM.Freeplay
