@@ -2,7 +2,7 @@
 Docker image for freeplay [Half-Life 2: Deathmatch](http://store.steampowered.com/app/320/) servers.
 
 # Linux Container
-[![](https://images.microbadger.com/badges/version/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux.svg)](https://microbadger.com/images/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux.svg)](https://microbadger.com/images/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux "Get your own image badge on microbadger.com")
 ```
 docker pull lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux
 ```
