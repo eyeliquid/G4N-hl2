@@ -8,15 +8,15 @@ ENV IMAGE="gamesvr-srcds-hl2dm-freeplay:linux"
 
 HEALTHCHECK NONE
 
-USER root
+# UPDATE USERNAME
+RUN usermod -l HL2DMFreeplay HL2DM
+
+USER HL2DMFreeplay
 
 COPY ./dist /app/bin/
 
 COPY ./dist.linux /app/bin/hl2mp/
-
-# CLEAN UP
-RUN usermod -l HL2DM.Freeplay HL2DM
 	
 WORKDIR /app/bin/
 
-USER HL2DM.Freeplay
+ENTRYPOINT ["/bin/sh"]
