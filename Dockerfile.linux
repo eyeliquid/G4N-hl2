@@ -18,5 +18,3 @@ COPY ./dist /app/bin/
 COPY ./dist.linux /app/bin/hl2mp/
 	
 WORKDIR /app/bin/
-
-ENTRYPOINT ["/bin/sh"]
