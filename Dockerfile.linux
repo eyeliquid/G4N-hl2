@@ -1,20 +1,20 @@
 # escape=`
 
-FROM lacledeslan/gamesvr-srcds-hl2dm:linux
+FROM lacledeslan/gamesvr-hl2dm
 
 LABEL maintainer "Laclede's LAN <contact@lacledeslan.com>"
 
-ENV IMAGE="gamesvr-srcds-hl2dm-freeplay:linux"
+ENV IMAGE="gamesvr-hl2dm-freeplay"
 
 HEALTHCHECK NONE
+
+COPY ./dist /app/hl2mp/
+
+COPY ./dist.linux /app/hl2mp/
 
 # UPDATE USERNAME
 RUN usermod -l HL2DMFreeplay HL2DM
 
 USER HL2DMFreeplay
 
-COPY ./dist /app/bin/
-
-COPY ./dist.linux /app/bin/hl2mp/
-	
-WORKDIR /app/bin/
+WORKDIR /app/
