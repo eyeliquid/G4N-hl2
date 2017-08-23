@@ -6,9 +6,9 @@ LABEL MAINTAINER="Laclede's LAN <contact@lacledeslan.com>" `
       org.label-schema.url="https://github.com/LacledesLAN" `
       org.label-schema.vendor="Laclede's LAN" `
       org.label-schema.vcs-ref=$VCS_REF `
-      org.label-schema.name="gamesvr-csgo" `
-      org.label-schema.description="Counter-Strike: Global Offensive in Docker" `
-      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-csgo"
+      org.label-schema.name="gamesvr-hl2dm-freeplay" `
+      org.label-schema.description="LL Half-Life 2: Deathmatch Freeplay Server" `
+      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-hl2dm-freeplay"
 
 HEALTHCHECK NONE
 
