@@ -2,21 +2,19 @@
 {
 	"1"
 	{
-		"type"		"S"
-		"text"		"{GREEN}Join our Steam group! http://steamcommunity.com/groups/lacledes_lan"
-		"flags"		""
+		"type"		"C"
+		"text"		"www.domain.com"
 	}
 	"2"
 	{
-		"type"		"S"
-		"text"		"{GREEN}We're on Twitter! Tweet us at @LacledesLAN."
-		"flags"		""
+		"type"		"CH"
+		"text"		"contact@domain.com"
 	}
 	"3"
 	{
-		"type"		"S"
-		"text"		"{GREEN}Next map is {NEXTMAP} in {TIMELEFT}."
-		"flags"		""
+		"type"		"M"
+		"text"		"Next map is {NEXTMAP} in {TIMELEFT} minutes."
+		"flags"		"cft"
 	}
 	"4"
 	{
@@ -25,20 +23,13 @@
 	}
 	"5"
 	{
-		"type"		"S"
-		"text"		"{GREEN}If there are any problems feel free to talk to the staff at the admin table."
-		"flags"		""
+		"type"		"T"
+		"text"		"{ORANGE}friendly fire is {CONVAR_BOOL:mp_friendlyfire}."
 	}
 	"6"
 	{
 		"type"		"S"
-		"text"		"{GREEN}Say '!rtv' to initiate a map vote."
-		"flags"		""
-	}
-	"7"
-	{
-		"type"		"S"
-		"text"		"{GREEN}To nominate a new map, say '!nominate'."
-		"flags"		""
+		"text"		"{GREEN}Admins: Sourcemod version is {CONVAR:sourcemod_version} and advertisement plugin version is {CONVAR:sm_extended_advertisements_version}"
+		"flags"		"z"
 	}
 }
