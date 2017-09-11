@@ -17,7 +17,9 @@ COPY ./dist /app/hl2mp/
 COPY ./dist.linux /app/hl2mp/
 
 # UPDATE USERNAME
-RUN usermod -l HL2DMFreeplay HL2DM
+RUN usermod -l HL2DMFreeplay HL2DM &&`
+    find /app -type d -exec chmod 775 {} + &&`
+    chmod +x /app/ll-tests/*.sh
 
 USER HL2DMFreeplay
 
