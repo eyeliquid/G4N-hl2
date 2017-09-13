@@ -1,13 +1,25 @@
-# gameserver-srcds-hl2-freeplay
-Docker image for freeplay [Half-Life 2: Deathmatch](http://store.steampowered.com/app/320/) servers.
+# LL Half-Life 2: Deathmatch Freeplay Server
 
-# Linux Container
-[![](https://images.microbadger.com/badges/image/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux.svg)](https://microbadger.com/images/lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux "Get your own image badge on microbadger.com")
+## Linux Container
+[![](https://images.microbadger.com/badges/version/lacledeslan/gamesvr-hl2dm-freeplay.svg)](https://microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/lacledeslan/gamesvr-hl2dm-freeplay.svg)](https://microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay "Get your own image badge on microbadger.com")
+
+**Download**
 ```
-docker pull lacledeslan/gamesvr-srcds-hl2dm-freeplay:linux
+docker pull lacledeslan/gamesvr-hl2dm-freeplay
+```
+
+**Run self tests**
+```
+NOT YET IMPLEMENTED
+```
+
+**Run simple interactive server**
+```
+docker run -it --rm --net=host lacledeslan/gamesvr-hl2dm-freeplay ./srcds_run -game hl2mp +map dm_overwatch -console -usercon +sv_lan 1
 ```
 
 # Build Triggers
 Automated builds of this image can be triggered by the following sources:
-* [Commits on GitHub](https://github.com/LacledesLAN/gamesvr-srcds-hl2dm-freeplay)
-* [Upstream build of lacledeslan/gamesvr-srcds-hl2dm](https://hub.docker.com/r/lacledeslan/gamesvr-srcds-hl2dm/)
+* [Commits on GitHub](https://github.com/LacledesLAN/gamesvr-hl2dm-freeplay)
+* [Upstream build of lacledeslan/gamesvr-hl2dm](https://hub.docker.com/r/lacledeslan/gamesvr-hl2dm/)
