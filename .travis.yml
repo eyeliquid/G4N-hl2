@@ -12,7 +12,7 @@ services:
 
 script:
 - docker version
-- docker build --no-cache --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI -f Dockerfile.linux
+- docker build --no-cache --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI -f Dockerfile.linux .
 - docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh
 
 notifications:
