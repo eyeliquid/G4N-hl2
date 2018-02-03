@@ -11,9 +11,9 @@ services:
   - docker
 
 script:
-- docker version
-- docker build --no-cache --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI -f Dockerfile.linux .
-- docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh
+  - docker version
+  - docker build --no-cache --tag local/gamesvr-hl2dm-freeplay --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI -f Dockerfile.linux .
+  - docker run -it --rm local/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh
 
 notifications:
   slack:
@@ -27,4 +27,4 @@ deploy:
   on:
     branch: master
 after_deploy:
-- curl -X POST https://hooks.microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay/$MICROBADGER_TOKEN
+  - curl -X POST https://hooks.microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay/$MICROBADGER_TOKEN
