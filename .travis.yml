@@ -31,4 +31,4 @@ deploy:
   on:
     branch: master
 after_deploy:
- - curl -X POST https://hooks.microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay/$MICROBADGER_TOKEN
+  - curl -X POST https://hooks.microbadger.com/images/lacledeslan/gamesvr-hl2dm-freeplay/$MICROBADGER_TOKEN
