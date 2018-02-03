@@ -6,18 +6,21 @@ addons:
     - docker-ce
 git:
   depth: 4
+
 services:
-- docker
+  - docker
+
 script:
 - docker version
-- docker build --no-cache --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI
-  ./linux
+- docker build --no-cache --tag lacledeslan/gamesvr-hl2dm-freeplay --build-arg BUILDNODE=TravisCI -f Dockerfile.linux
 - docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh
+
 notifications:
   slack:
     secure: kGGiccHMqQX26qwny4BPv4azqkktJeE65YpyQ1cc6qMt6GIgjRvRzOvsp6e7yTMVQcGQwJOd1tXiC2aDsPC9Au6zaWQxAqYu6H+MRJExwjoXoOBS0rQkbDU9+5BfIlh1SSMn+jHmZO1WFjOPuiQn+L5cIR90b5vvKVXmQNHam1qI09W591qYez7wo6ssNIxI1QH9H+mGLUzWO7GYExhEmQdDfOMCtcyd1bBLzrCPKz7mIeLoBPD4nkiRwrIvtxTVn0DTSBT66P295jHtaKW+aoiltGnnOAxa6riJWnOzD+Ztw/nqOHpT2nrl23MPY95wFEyx38Pq8rO9nT+12ww1rwYGpQ9ICFPD6/f1rxVQ2GHJxkmrXwdIvClFh/29Sr3rbPVktdkFrkF3/CWSuWKoLMPPLU8ORXnmJZCRemZXHRogLpZlMjQaLjCoRc9Q1YXU17Auq2fczwjf7urxw1mKxeKsKmX7ykcXHK4KONJ9z6pmoDMV04MRN6ChWTepnWZdu1uA+qOfydSv/sAPBsk2bLLUqJD2MPanRzjBuFNUXydzc7GZHQPnql7ANN8NtXrnJ1lQE0dKo39gXngn1JKOzXAM0FIi/NwlDv4JyRgqTNfkcZbDPu/9PwotKVm8UdQAoLuunOnYAGbHc2M47H8OnETaF+Cre59lTPf2SSca6Vo=
+
 before_deploy:
-- docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASS";
+  - docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASS";
 deploy:
   provider: script
   script: docker push lacledeslan/gamesvr-hl2dm-freeplay
