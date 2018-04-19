@@ -7,13 +7,13 @@
 ### Download
 
 ```shell
-docker pull lacledeslan/gamesvr-hl2dm-freeplay
+docker pull lacledeslan/gamesvr-hl2dm-freeplay;
 ```
 
 ## Run self tests
 
 ```shell
-docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh
+docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh;
 ```
 
 ## Run simple interactive server
