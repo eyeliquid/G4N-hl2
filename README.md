@@ -10,13 +10,15 @@
 docker pull lacledeslan/gamesvr-hl2dm-freeplay;
 ```
 
-## Run self tests
+### Run Self Tests
+
+The image includes a test script that can be used to verify its contents. No changes or pull-requests will be accepted to this repository if any tests fail.
 
 ```shell
 docker run -it --rm lacledeslan/gamesvr-hl2dm-freeplay ./ll-tests/gamesvr-hl2dm-freeplay.sh;
 ```
 
-## Run simple interactive server
+### Run simple interactive server
 
 ```shell
 docker run -it --rm --net=host lacledeslan/gamesvr-hl2dm-freeplay ./srcds_run -game hl2mp +map dm_overwatch -usercon +sv_lan 1
