@@ -155,7 +155,6 @@ should_lack 'WARNING: Failed to load 32-bit libtinfo.so.5 or libncurses.so.5' 'H
 should_lack 'steamclient.so: cannot open shared object file: No such file or directory' 'steamclient.so hack is working';
 
 # Check SourceMod/MetaMod plugins
-should_have '[SM/MM Information]' 'Meta Mod and Source Mod are both running';
 should_have '===BEGIN SERVER STATUS===' 'LL status mod ran';
 should_lack '<Error> "' 'LL status mod is not showing any SM plugins with errors'
 should_have '"Server Status-LL MOD" (' 'LL status mod reports itself';
@@ -168,6 +167,8 @@ should_have '"Basic Votes" (' "LL status mod reports basic votes";
 
 # Verify Issuing Commands Works
 should_echo "sv_cheats" '"sv_cheats" = "0"';
+should_echo "meta version" 'Metamod:Source Version Information';
+should_echo "sm version" 'SourceMod Version Information'
 #####################################################################################################
 #####################################################################################################
 
